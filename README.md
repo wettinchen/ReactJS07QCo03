@@ -30,9 +30,9 @@ https://www.youtube.com/@DaveGrayTeachesCode
         使用 map 方法 新增三個有勾選功能的列表。
         列表的文字後方要新增刪除按鈕
 
-        HTML: <ul></ul> <li></li> <input> <label> <button>
-              <??? className= "item" type="checkbox" checked={???}
-        JavaScript: {item.map((item) => (???))} {item.checked}
+        HTML: <ul></ul> <li></li> <input /> <label></label> <button></button>
+              <??? className= "item"> <??? type="checkbox" checked={???}
+        JavaScript: {item.map((item) => (???))} {???.checked}
 
 ###  6. Lists of elements need keys <Code更動>
         在 li 的 opening tag 設定 key，
@@ -40,7 +40,7 @@ https://www.youtube.com/@DaveGrayTeachesCode
         
         HTML: <li></li>
               key= {???}
-        JavaScript: {item.id}
+        JavaScript: {???.id}
 
 ###  7. Previewing the React list
         預覽列表目前的狀況
@@ -60,13 +60,14 @@ https://www.youtube.com/@DaveGrayTeachesCode
         示範如何透過修改 Code 勾選格子
 
 ### 11. Adding an onChange listener <Code更動>
-        設定新的功能，放入參數，使列表的格子稍後可以勾選修改。
+        設定新的功能，放入參數，使列表的格子可以確認 key 的狀態。
 
-        HTML: <??? onChange={???} >
+        HTML: <??? onChange={???} />
         JavaScript: const handleCheck ......
 
 ### 12. The handleCheck function <Code更動>
-        設定格子的勾選和取消勾選功能。
+        設定格子的勾選和取消勾選的功能，
+        便能勾選與取消勾選。。
 
         JavaScript: const listItems ......
 
@@ -75,7 +76,7 @@ https://www.youtube.com/@DaveGrayTeachesCode
         Content 下層 state 的資料。
 
 ### 14. Saving state to localStorage
-        將選單的項目存入 localStorage
+        將選單的項目存入 localStorage。
 
         JavaScript: localStorage ......
 
@@ -90,7 +91,8 @@ https://www.youtube.com/@DaveGrayTeachesCode
         取消打勾時，選單項目橫線會消除。
 
         HTML: <??? style={???}>
-        JavaScript: {(item.checked) ...}
+        CSS: {???: "line-through"}
+        JavaScript: {(???.checked) ...}
 
 ### 17. Adding an onClick listener
         暫時設定垃圾桶圖標的刪除功能為回傳 id。
@@ -116,6 +118,11 @@ https://www.youtube.com/@DaveGrayTeachesCode
         HTML: <ul>...</ul> <p style={}>Your list is empty.<p>
         CSS: marginTop: "2rem"
         JavaScript: ??? <ul>...</ul> ???
+
+        Hint:
+        (HTML element)
+        {{CSS style}}
+        {JavaScript expression}
 
 ### 20. When will we load state from localStorage?
         概述下一章的內容。
